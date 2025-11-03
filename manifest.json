@@ -1,0 +1,39 @@
+{
+  "name": "Kiite Global Controller",
+  "version": "1.0",
+  "description": "Kiiteの再生/一時停止、曲送りをグローバルショートカットで操作します。",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://kiite.jp/*"
+  ],
+  "commands": {
+    "toggle-play": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space"
+      },
+      "description": "再生/一時停止",
+      "global": true
+    },
+    "next-track": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right"
+      },
+      "description": "次の曲へ",
+      "global": true
+    },
+    "prev-track": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Left"
+      },
+      "description": "前の曲へ",
+      "global": true
+    }
+  }
+}
